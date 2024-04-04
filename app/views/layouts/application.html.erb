@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Friends</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <style>
+  /* CSS styles for the header */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+ .header {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_52683-60691.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+    /* Adding shadow effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .header h1 {
+    margin: 0;
+    font-size: 48px; /* Larger font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* Adding shadow effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .header p {
+    margin: 10px 0; /* Increased margin */
+    font-size: 20px; /* Larger font size */
+    /* Adding shadow effect */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+
+
+   .navbar {
+    background-color: #444; /* Navbar background color */
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+  }
+  .navbar a:hover {
+    background-color: #555; /* Hover background color */
+  }
+
+
+
+
+
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 3px; /* Increased padding */
+    text-align: center;
+    /* Adding shadow effect */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .footer p {
+    margin: 2px 0;
+    font-size: 10px; /* Larger font size */
+    /* Adding shadow effect */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+</style>
+  </head>
+
+  <body>
+<header class="header">
+  <div class="header-content">
+    <h1>Friends App</h1>
+    <p>Discover amazing Friends</p>
+  </div>
+</header>
+<%= render 'home/navbar' %>
+    <%= yield %>
+  <footer class="footer">
+  <p>&copy; 2024 Amazing Website. All rights reserved.</p>
+  <p>Designed with <a href="https://www.example.com" target="_blank">Love</a> by Saif Ali</p>
+</footer>
+  </body>
+
+</html>
